@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="{{page.app}}">
 
-  {% include head.html %}
+  {%include head.html%}
 
   <body>
 
-    {% include header.html %}
+    {%include header.html%}
 
     <div class="page-content">
       <div class="wrapper">
@@ -13,8 +13,9 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    {%include footer.html%}
 
+    {%include javascripts.html%}
   </body>
 
 </html>

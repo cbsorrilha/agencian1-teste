@@ -1,23 +1,12 @@
 ---
 layout: default
+app: IndexApp
 ---
 
-<div class="home">
+{%include carousel.html%}
 
-  <h1 class="page-heading">Posts</h1>
+{%include products.html type="destaque" variable-type=page.variable%}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+{%include products.html type="novidades" variable-type=page.variable%}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+{%include signature.html%}
