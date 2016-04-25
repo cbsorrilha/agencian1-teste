@@ -14,7 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  cbsorrilha
-exclude: ["node_modules", "bower_components", "_psd", "_app", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "bower_components", "_psd", "_app", "gulpfile.js", "package.json", "README.MD"]
 
 # Build settings
 markdown: kramdown
