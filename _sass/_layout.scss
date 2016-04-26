@@ -32,6 +32,10 @@ header {
     }
     .dropdown-menu {
         background-color: $brand-color;
+        border: none;
+        box-shadow: none;
+        padding-bottom: 15px;
+        @include border-radius(0)
     }
     .main-search {
         input, button {
@@ -55,20 +59,51 @@ header {
         }
 
     }
+    .dropdown-submenu{position:relative;}
+    .dropdown-submenu>.dropdown-menu{
+        top:0;
+        left:100%;
+        margin-top:-5px;
+        margin-left:-1px;
+    }
+    .dropdown-submenu:hover>.dropdown-menu{
+        display:block;
+    }
+    .dropdown-submenu>a:after{
+        display:block;
+        float:right;
+        width:0;
+        height:0;
+        margin-top:5px;
+        margin-right:-10px;
+    }
+    .dropdown-submenu.pull-left{
+        float:none;
+    }
+    .dropdown-submenu.pull-left>.dropdown-menu{
+        left:-100%;
+        margin-left:10px;
+    }
 }
 .carousel {
     .item img {
         width: 100%;
+    }
+    .left-image-container {
+        padding-right: 5px !important;
+    }
+    .right-image-container {
+        padding-left: 5px !important;
     }
     .carousel-control {
         background-repeat: no-repeat;
         background-position: center;
     }
     .carousel-control.left {
-        background-image: url('/img/chevron-left.png');
+        background-image: url('../img/chevron-left.png');
     }
     .carousel-control.right {
-        background-image: url('/img/chevron-right.png');
+        background-image: url('../img/chevron-right.png');
     }
 }
 section {
